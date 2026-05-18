@@ -1,11 +1,11 @@
 import Navbar from "../components/Navbar";
-import ChatBox from "../components/ChatBox";
+import ChatBox from "../components/ChatBox.jsx";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <ChatBox />
+      <ChatBox />rm -rf node_modules/.vite
     </div>
   );
 };
