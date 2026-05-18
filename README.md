@@ -1,76 +1,162 @@
 # CodeMentor AI
 
-A beginner-focused AI coding mentor designed to simplify JavaScript and React concepts for new developers.
+An AI-native beginner coding mentor designed to simplify programming concepts through structured educational responses.
 
 ---
 
 # Project Objective
 
-CodeMentor AI is a specialized educational AI agent that teaches beginner programming concepts using simple explanations, structured formatting, and readable code examples.
+CodeMentor AI is a specialized educational AI agent focused on helping beginner developers understand JavaScript and React concepts using simplified explanations, structured formatting, and beginner-friendly teaching patterns.
 
-Unlike general-purpose coding assistants, this agent prioritizes:
-
-- beginner accessibility
-- simplified explanations
+Unlike general-purpose coding assistants, this project prioritizes:
 - educational clarity
-- reduced technical overload
+- beginner accessibility
+- reduced cognitive overload
 - structured learning
+- simplified technical explanations
+
+---
+
+# Problem Definition
+
+Many beginner developers struggle with modern programming education because existing learning tools often:
+- assume prior technical knowledge
+- provide overly advanced explanations
+- overwhelm users with large code blocks
+- prioritize speed over teaching clarity
+- lack structured educational formatting
+
+General-purpose AI assistants can generate correct answers, but they frequently fail to adapt explanations for beginner-level understanding.
+
+This creates frustration, confusion, and high dropout rates among new developers.
+
+CodeMentor AI was built to address this problem through beginner-first educational responses.
+
+---
+
+# Why This Problem Matters
+
+Beginner developer education is one of the highest-impact applications of AI-assisted software.
+
+Improving accessibility for new programmers:
+- accelerates learning
+- improves retention
+- reduces frustration
+- lowers entry barriers into software development
+- creates stronger engineering foundations
+
+This project prioritizes educational usability over raw model complexity.
+
+---
+
+# Target Users
+
+CodeMentor AI is designed for:
+- beginner developers
+- self-taught programmers
+- bootcamp students
+- first-year CS students
+- developers transitioning into React
 
 ---
 
 # Specialization
 
-## Problem Focus
+## Core Topics
 
 This agent specializes in:
-
 - JavaScript fundamentals
-- React basics
-- Closures
 - Arrays
+- Closures
 - Promises
-- Beginner-friendly coding explanations
+- React basics
+- Beginner-friendly programming explanations
 
 ---
 
-# Why This Problem Was Chosen
+# Why This Was Chosen As Priority #1
 
-Many beginner developers struggle because modern AI coding assistants often provide:
+Educational clarity for beginner developers was selected as the highest-priority problem because many AI coding tools optimize for experienced engineers rather than new learners.
 
-- overly advanced explanations
-- excessive technical jargon
-- large confusing code blocks
-- poor educational structure
+Instead of maximizing code generation complexity, this project focuses on:
+- comprehension
+- readability
+- teaching structure
+- simplified mental models
 
-CodeMentor AI was designed to reduce cognitive overload and provide a more approachable learning experience.
+The goal is to make programming education more approachable and less intimidating.
 
 ---
 
-# Why This Was Priority #1
+# Solution Overview
 
-Beginner developer education is one of the highest-impact use cases for AI.
+CodeMentor AI follows a beginner-focused educational workflow:
 
-Improving accessibility for new programmers:
-- accelerates learning
-- reduces frustration
-- improves retention
-- creates stronger engineering foundations
+1. User submits a programming-related question
+2. Backend detects educational topic/context
+3. Structured response templates are generated
+4. Markdown rendering formats explanations cleanly
+5. Syntax highlighting improves code readability
+6. Beginner-focused explanations reduce cognitive overload
 
-This project prioritizes educational clarity over raw model complexity.
+The system prioritizes educational structure over raw output complexity.
+
+---
+
+# AI-Native Development Workflow
+
+This project was built using an AI-assisted development workflow centered around Cursor.
+
+AI was used for:
+- rapid frontend scaffolding
+- backend API structuring
+- debugging runtime errors
+- markdown rendering integration
+- syntax highlighting implementation
+- React component generation
+- Express route architecture
+- iterative UI refinement
+
+Development followed an iterative loop:
+
+1. Define educational UX goals
+2. Generate initial implementation with AI assistance
+3. Test and refine manually
+4. Debug using AI-guided troubleshooting
+5. Improve beginner-focused response formatting
+6. Evaluate usability and readability
+
+This workflow significantly accelerated development speed while maintaining human oversight and architectural decision-making.
 
 ---
 
 # Features
 
 - Beginner-focused tutoring
-- Clean React frontend
-- Express.js backend
+- Structured educational responses
 - Markdown rendering
 - Syntax-highlighted code blocks
-- Structured educational responses
+- Clean React frontend
+- Express.js backend
+- Responsive interface
+- Loading states
 - Cursor-compatible configuration
 - Secure environment variable usage
-- Specialized tutoring behavior
+- Mock AI fallback mode for offline/frontend testing
+
+---
+
+# Baseline Comparison
+
+| Tool | Weakness for Beginners |
+|---|---|
+| ChatGPT | Responses can be overly broad or advanced |
+| StackOverflow | Assumes prior technical knowledge |
+| YouTube Tutorials | Slow information retrieval and passive learning |
+| Generic AI Coding Assistants | Often prioritize code generation over teaching |
+| CodeMentor AI | Structured beginner-focused educational responses |
+
+CodeMentor AI prioritizes clarity, educational structure, and simplified explanations over raw technical complexity.
 
 ---
 
@@ -101,6 +187,7 @@ ai-agent-quest/
 ├── README.md
 ├── PERFORMANCE_METRICS.md
 ├── BENCHMARK_COMPARISON.md
+├── SELF_REVIEW.md
 └── .cursorrules
 ```
 
@@ -196,17 +283,24 @@ The Cursor rules configure the AI behavior to:
 
 # Performance Evaluation
 
-Detailed performance metrics are available in:
+Detailed evaluation metrics are available in:
 
 ```bash
 PERFORMANCE_METRICS.md
 ```
 
+The evaluation framework measures:
+- beginner readability
+- explanation clarity
+- formatting consistency
+- educational structure
+- response usability
+
 ---
 
 # Benchmark Comparison
 
-Benchmark comparison against default Cursor Claude is available in:
+Detailed comparison against default Cursor/Claude behavior is available in:
 
 ```bash
 BENCHMARK_COMPARISON.md
@@ -220,20 +314,50 @@ Sensitive credentials are protected using environment variables.
 
 No API keys or secrets are committed to the repository.
 
+Environment variables are excluded using `.gitignore`.
+
+---
+
+# AI Model Integration Status
+
+During development, external AI API quota and billing limitations were encountered.
+
+To continue frontend and interaction development without interruption, a mock AI response system was implemented temporarily.
+
+This fallback mode allows:
+- frontend testing
+- markdown rendering validation
+- syntax highlighting validation
+- UI interaction testing
+- response structure evaluation
+
+The backend architecture remains compatible with real LLM integration using providers such as:
+- OpenAI
+- Gemini
+- Claude
+
+---
+
+# Live Demo
+
+Deployment link coming soon.
+
 ---
 
 # Future Improvements
 
-- Chat history
-- Persistent conversations
+- Real LLM integration
+- Conversation memory
+- Personalized learning paths
 - Voice explanations
-- More programming topics
-- Real AI model integration
+- Additional programming topics
 - User authentication
 - Learning progress tracking
+- Adaptive response difficulty
+- Multi-turn tutoring sessions
 
 ---
 
 # Author
 
-Built as part of a quest-based AI agent hiring challenge.
+Built as part of a quest-based AI agent hiring challenge focused on AI-native product development, rapid execution, and educational problem-solving.g
