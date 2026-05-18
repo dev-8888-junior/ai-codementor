@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use("/api/chat", chatRoutes);
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("CodeMentor AI Backend Running");
 });
 
