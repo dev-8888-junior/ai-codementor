@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <ChatBox />rm -rf node_modules/.vite
+      <ChatBox />
     </div>
   );
 };
