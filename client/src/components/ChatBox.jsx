@@ -51,7 +51,7 @@ const ChatBox = () => {
         aiMessage,
       ]);
     } catch (error) {
-      console.log(error);
+      console.error("Failed to get AI response:", error);
     }
 
     setLoading(false);
