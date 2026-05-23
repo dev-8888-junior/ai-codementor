@@ -1,9 +1,4 @@
-import {
-  useState,
-  useRef,
-  useEffect,
-} from "react";
-
+import { useState, useRef, useEffect } from "react";
 import API from "../services/api";
 import MessageBubble from "./MessageBubble";
 import Loader from "./Loader";
@@ -24,38 +19,32 @@ const ChatBox = () => {
   const sendMessage = async () => {
     if (!message.trim()) return;
 
-    const userMessage = {
-      sender: "user",
-      text: message,
-    };
+    const currentMessage = message;
+    setMessage("");
 
     setMessages((prev) => [
       ...prev,
-      userMessage,
+      { sender: "user", text: currentMessage },
     ]);
 
     setLoading(true);
 
     try {
       const res = await API.post("/chat", {
-        message,
+        message: currentMessage,
       });
 
-      const aiMessage = {
-        sender: "ai",
-        text: res.data.reply,
-      };
+      console.log("BACKEND RESPONSE:", res.data);
 
       setMessages((prev) => [
         ...prev,
-        aiMessage,
+        { sender: "ai", text: res.data.reply },
       ]);
     } catch (error) {
-      console.error("Failed to get AI response:", error);
+      console.log("ERROR:", error);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
-    setMessage("");
   };
 
   return (
@@ -79,19 +68,13 @@ const ChatBox = () => {
           type="text"
           placeholder="Ask coding question..."
           value={message}
-          onChange={(e) =>
-            setMessage(e.target.value)
-          }
+          onChange={(e) => setMessage(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              sendMessage();
-            }
+            if (e.key === "Enter") sendMessage();
           }}
         />
 
-        <button onClick={sendMessage}>
-          Send
-        </button>
+        <button onClick={sendMessage}>Send</button>
       </div>
     </div>
   );
