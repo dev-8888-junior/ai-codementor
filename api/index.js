@@ -8,7 +8,14 @@ dotenv.config();
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json());    
+
+app.post("/api/chat", (req, res) => {
+  res.json({
+    success: true,
+    message: "DIRECT ROUTE WORKING",
+  });
+});
 
 app.use("/api/chat", chatRoutes);
 
