@@ -10,12 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());    
 
-app.post("/api/chat", (req, res) => {
-  res.json({
-    success: true,
-    reply: "DIRECT ROUTE WORKING",
-  });
-});
+
 app.use("/api/chat", chatRoutes);
 
 app.get("/api", (req, res) => {
