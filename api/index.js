@@ -13,10 +13,9 @@ app.use(express.json());
 app.post("/api/chat", (req, res) => {
   res.json({
     success: true,
-    message: "DIRECT ROUTE WORKING",
+    reply: "DIRECT ROUTE WORKING",
   });
 });
-
 app.use("/api/chat", chatRoutes);
 
 app.get("/api", (req, res) => {
